@@ -1,24 +1,28 @@
 function filtered_data = matrix_bandpass_filter(data_matrix, sampling_rate, low_freq, high_freq)
-    % data_matrix: 필터링할 데이터 행렬, 각 열이 하나의 채널임 (2D 배열)
-    % sampling_rate: 샘플링 레이트 (Hz)
-    % low_freq: 필터의 하한 주파수 (Hz)
-    % high_freq: 필터의 상한 주파수 (Hz)
+    % Apply a bandpass filter to a matrix of data, where each column represents a signal channel.
+    %
+    % Parameters:
+    % data_matrix: Matrix of data to be filtered, with each column as a channel (2D array).
+    % sampling_rate: Sampling rate of the data in Hz.
+    % low_freq: Lower cutoff frequency of the filter in Hz.
+    % high_freq: Upper cutoff frequency of the filter in Hz.
 
-    % 밴드패스 필터 설계
+    % Design a bandpass filter
     bp_filter = designfilt('bandpassiir', ...
-                           'FilterOrder', 4, ...
-                           'HalfPowerFrequency1', low_freq, ...
-                           'HalfPowerFrequency2', high_freq, ...
-                           'SampleRate', sampling_rate);
+                           'FilterOrder', 4, ...            % Order of the filter
+                           'HalfPowerFrequency1', low_freq, ...  % Lower cutoff frequency
+                           'HalfPowerFrequency2', high_freq, ... % Upper cutoff frequency
+                           'SampleRate', sampling_rate);         % Sampling rate
 
-    % 데이터의 채널 수
+    % Determine the number of channels in the data
     num_channels = size(data_matrix, 2);
 
-    % 필터링된 데이터를 저장할 행렬 초기화
+    % Initialize a matrix to hold the filtered data
     filtered_data = zeros(size(data_matrix));
 
-    % 각 채널에 대해 필터 적용
+    % Apply the filter to each channel
     for ch = 1:num_channels
+        % Filter each column (channel) of the data_matrix
         filtered_data(:, ch) = filter(bp_filter, data_matrix(:, ch));
     end
 end

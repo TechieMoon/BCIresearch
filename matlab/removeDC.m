@@ -1,4 +1,4 @@
-% DC 제거 함수 정의
+% Define a function to remove DC offset
 function dataWithoutDC = removeDC(data)
     dataWithoutDC = data - mean(data);
 end
