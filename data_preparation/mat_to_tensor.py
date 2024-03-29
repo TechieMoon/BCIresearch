@@ -3,7 +3,7 @@ import torch
 
 # Define constants for the dataset and model paths
 DATA_PATH = 'YOUR/DATA/PATH'  # Path to the .mat dataset file
-SAVE_PATH_PREFIX = 'YOUR/SAVE/PATH' + '/'  # Prefix for saving tensors
+SAVE_PATH_PREFIX = 'YOUR/SAVE/PATH'  # Prefix for saving tensors
 
 def save_tensor_data(mat, key_prefix, save_path_prefix):
     """
@@ -28,4 +28,4 @@ mat = scipy.io.loadmat(DATA_PATH)
 
 # Process and save low, mid, and high frequency data
 for freq in ['low', 'mid', 'high']:
-    save_tensor_data(mat, freq, SAVE_PATH_PREFIX + freq)
+    save_tensor_data(mat, freq, SAVE_PATH_PREFIX + '/' + freq)
