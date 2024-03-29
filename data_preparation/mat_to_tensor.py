@@ -3,7 +3,7 @@ import torch
 
 # Define constants for the dataset and model paths
 DATA_PATH = 'YOUR/DATA/PATH'  # Path to the .mat dataset file
-SAVE_PATH_PREFIX = 'YOUR/SAVE/PATH'  # Prefix for saving tensors
+SAVE_PATH_PREFIX = 'YOUR/SAVE/PATH' + '/'  # Prefix for saving tensors
 
 def save_tensor_data(mat, key_prefix, save_path_prefix):
     """
