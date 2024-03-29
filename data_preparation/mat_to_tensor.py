@@ -2,8 +2,8 @@ import scipy.io
 import torch
 
 # Define constants for the dataset and model paths
-DATA_PATH = 'C:/Users/start/Documents/dataset/SSVEPdataset.mat'  # Path to the .mat dataset file
-SAVE_PATH_PREFIX = 'C:/Users/start/Documents/dataset/'  # Prefix for saving tensors
+DATA_PATH = 'YOUR/DATA/PATH'  # Path to the .mat dataset file
+SAVE_PATH_PREFIX = 'YOUR/SAVE/PATH'  # Prefix for saving tensors
 
 def save_tensor_data(mat, key_prefix, save_path_prefix):
     """
