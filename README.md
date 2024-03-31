@@ -14,3 +14,7 @@ Then, by executing the training and testing codes in the [models](models) folder
 [1] CHOI, Ga-Young, et al. A multi-day and multi-band dataset for a steady-state visual-evoked potential–based brain-computer interface. GigaScience, 2019, 8.11: giz133.
 
 [2] Choi G-Y, Han C-H, Jung Y-J, Hwang H-J. Supporting data for "A multi-day and multi-band dataset for steady-state visual evoked potential–based brain-computer interface". Giga Science Database 2019. http://dx.doi.org/10.5524/100660.
+
+[3] Schirrmeister, R. T., Springenberg, J. T., Fiederer, L. D. J., Glasstetter, M., Eggensperger, K., Tangermann, M., ... & Ball, T. (2017). Deep learning with convolutional neural networks for EEG decoding and visualization. Human brain mapping, 38(11), 5391-5420.
+
+[4] Gramfort, A., M. Luessi, E. Larson, D. A. Engemann, D. Strohmeier, C. Brodbeck, R. Goj, M. Jas, T. Brooks and L. Parkkonen (2013). "MEG and EEG data analysis with MNE-Python." Frontiers in neuroscience 7: 70133.
